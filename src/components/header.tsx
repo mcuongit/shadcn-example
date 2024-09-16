@@ -118,18 +118,20 @@ export default function Header() {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavLink to="/auth/signin">
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Đăng nhập
-                </NavigationMenuLink>
-              </NavLink>
+              <NavigationMenuLink
+                className={navigationMenuTriggerStyle()}
+                asChild
+              >
+                <NavLink to="/auth/signin">Đăng nhập</NavLink>
+              </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavLink to="/auth/signup">
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Đăng ký
-                </NavigationMenuLink>
-              </NavLink>
+              <NavigationMenuLink
+                className={navigationMenuTriggerStyle()}
+                asChild
+              >
+                <NavLink to="/auth/signup">Đăng ký</NavLink>
+              </NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
