@@ -1,15 +1,15 @@
+import { RouteErrorBoundary } from "@/components/error-boundary";
 import Layout from "@/components/layout";
 import SignIn from "@/pages/auth/signin";
 import SignUp from "@/pages/auth/signup";
 import Dashboard from "@/pages/dashboard/dashboard";
-import ErrorPage from "@/pages/exceptions/error-page";
 import { createBrowserRouter } from "react-router-dom";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
-    errorElement: <ErrorPage />,
+    errorElement: <RouteErrorBoundary />,
     children: [
       {
         path: "/",
@@ -29,6 +29,6 @@ export const router = createBrowserRouter([
         element: <SignIn />,
       },
     ],
-    errorElement: <ErrorPage />,
+    errorElement: <RouteErrorBoundary />,
   },
 ]);
